@@ -1,7 +1,7 @@
 """
 URL configuration for config project.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
+The urlpatterns list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.0/topics/http/urls/
 Examples:
 Function views
@@ -15,8 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+from . import views
 
 urlpatterns = [
+    path('', views.home, name='home'),
+    path('seccion/<int:numero>/', views.seccion_placeholder, name='seccion_placeholder'),
     path('admin/', admin.site.urls),
+    path('cv-sebastian/', include('cv_sebastian.urls')),
+    path('cv-edwar/', include('cv_edwar.urls')),
+    path('cv-daniel/', include('cv_daniel.urls')),
+    path('hv-juanma/', include('hv.urls')),
 ]
