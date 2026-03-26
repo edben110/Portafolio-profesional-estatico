@@ -8,7 +8,7 @@ def home(request):
         {"numero": 1, "titulo": "Seccion 1"},
         {"numero": 2, "titulo": "Seccion 2"},
         {"numero": 3, "titulo": "Seccion 3"},
-        {"numero": 4, "titulo": "Seccion 4"},
+        {"numero": 4, "titulo": "Mi HV"},
     ]
     return render(request, "home.html", {"secciones": secciones})
 
