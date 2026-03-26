@@ -1,7 +1,7 @@
 """
 URL configuration for config project.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
+The urlpatterns list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.0/topics/http/urls/
 Examples:
 Function views
@@ -23,4 +23,6 @@ urlpatterns = [
     path('seccion/4/', include('hv.urls')),
     path('seccion/<int:numero>/', views.seccion_placeholder, name='seccion_placeholder'),
     path('admin/', admin.site.urls),
+    path('cv-edwar/', include('cv_edwar.urls')),
+    path('cv-sebastian/', include('cv_sebastian.urls')),
 ]
