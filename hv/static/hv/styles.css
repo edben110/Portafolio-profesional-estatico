@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #a0c4ff;
+  margin-top: 8px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #16213e;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar a {
+  color: #a0c4ff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+}
+
+/* Container */
+.container {
+  max-width: 860px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  color: #1a1a2e;
+  border-left: 4px solid #a0c4ff;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: #1a1a2e;
+}
+
+.card .date {
+  font-size: 0.85rem;
+  color: #888;
+  display: block;
+  margin: 4px 0 10px;
+}
+
+/* Skills */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  background-color: #1a1a2e;
+  color: #a0c4ff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Contact */
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-list a {
+  color: #1a1a2e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a2e;
+  color: #a0c4ff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .header h1 { font-size: 2rem; }
+  .navbar { gap: 15px; flex-wrap: wrap; }
+}
