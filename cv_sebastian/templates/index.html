@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portafolio | John Sebastian Ceballos Beltran</title>
+
+<link rel="stylesheet" href="{% static 'css/styles.css' %}?v=5">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<a href="{% url 'home' %}" class="back-btn" aria-label="Volver al inicio">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M19 12H5M12 19l-7-7 7-7"/>
+</svg>
+<span>Inicio</span>
+</a>
+
+<div class="logo">JS</div>
+
+<button class="hamburger" aria-label="Menú">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+<ul class="nav-links">
+<li><a href="#about">Sobre mí</a></li>
+<li><a href="#services">Servicios</a></li>
+<li><a href="#tech">Tecnologías</a></li>
+<li><a href="https://github.com/" target="_blank">GitHub</a></li>
+</ul>
+
+</nav>
+
+
+<header class="hero">
+
+<div class="hero-container">
+
+<img src="{% static 'images/avatar_sebas.jpeg' %}" class="avatar">
+
+<h1>John Sebastian Ceballos Beltran</h1>
+
+<p class="subtitle">
+Desarrollador Web | Frontend Developer
+</p>
+
+<a href="https://github.com/SebasC1801" target="_blank" class="btn">
+Ver GitHub
+</a>
+
+</div>
+
+</header>
+
+
+<section id="about" class="about">
+
+<h2>Sobre mí</h2>
+
+<p>
+Desarrollador web enfocado en la creación de interfaces modernas,
+funcionales y optimizadas. Me interesa construir soluciones digitales
+que combinen diseño atractivo con buen rendimiento y experiencia de usuario.
+</p>
+
+</section>
+
+
+<section id="services" class="services">
+
+<h2>Servicios</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+<h3>Desarrollo Web</h3>
+<p>Creación de sitios web modernos, rápidos y adaptables a cualquier dispositivo.</p>
+</div>
+
+<div class="service-card">
+<h3>Frontend Development</h3>
+<p>Desarrollo de interfaces interactivas utilizando tecnologías web modernas.</p>
+</div>
+
+<div class="service-card">
+<h3>Optimización Web</h3>
+<p>Mejoras de rendimiento, estructura de código y experiencia del usuario.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="tech" class="technologies">
+
+<h2>Experiencia y Tecnologías</h2>
+
+<div class="tech-grid">
+
+<span>Angular</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Tailwind</span>
+<span>C++</span>
+<span>Python</span>
+<span>Java</span>
+<span>Git</span>
+<span>GitHub</span>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 John Sebastian Ceballos Beltran</p>
+
+</footer>
+
+
+<script src="{% static 'js/script.js' %}?v=2"></script>
+
+</body>
+</html>
