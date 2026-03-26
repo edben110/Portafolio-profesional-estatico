@@ -3,110 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Inicio</title>
+    <title>Inicio</title>
     <style>
-        :root {
-            --bg-a: #0f172a;
-            --bg-b: #1e293b;
-            --card: #ffffff;
-            --primary: #0ea5e9;
-            --primary-hover: #0284c7;
-            --text-dark: #0f172a;
-            --text-light: #f8fafc;
-            --muted: #cbd5e1;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
             min-height: 100vh;
             display: grid;
             place-items: center;
-            padding: 2rem;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text-light);
-            background: radial-gradient(circle at 10% 20%, #334155 0%, var(--bg-a) 35%, var(--bg-b) 100%);
+            color: #f8fafc;
         }
 
-        .panel {
-            width: min(760px, 100%);
+        .card {
+            width: min(720px, 92%);
+            padding: 28px;
+            border-radius: 16px;
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 20px;
-            backdrop-filter: blur(6px);
-            padding: 2rem;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
         }
 
         h1 {
-            margin: 0;
             text-align: center;
-            font-size: clamp(1.6rem, 2.8vw, 2.2rem);
-        }
-
-        p {
-            margin: 0.75rem 0 2rem;
-            text-align: center;
-            color: var(--muted);
+            margin-top: 0;
         }
 
         .grid {
+            margin-top: 20px;
             display: grid;
             grid-template-columns: repeat(2, minmax(180px, 1fr));
-            gap: 1rem;
+            gap: 12px;
+>>>>>>> 34e25c7 (feat: cv edwar)
         }
 
         .btn {
             display: inline-block;
-            text-decoration: none;
             text-align: center;
+            text-decoration: none;
             font-weight: 700;
-            letter-spacing: 0.2px;
-            background: var(--card);
-            color: var(--text-dark);
-            border: 2px solid transparent;
-            padding: 0.95rem 1rem;
-            border-radius: 12px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+            color: #0f172a;
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 12px 14px;
         }
 
         .btn:hover {
-            transform: translateY(-2px);
-            background: var(--primary);
-            color: #fff;
-            box-shadow: 0 10px 24px rgba(14, 165, 233, 0.35);
-        }
-
-        .btn:focus-visible {
-            outline: 3px solid #e2e8f0;
-            outline-offset: 2px;
-            border-color: var(--primary-hover);
+            background: #38bdf8;
+            color: #ffffff;
+>>>>>>> 34e25c7 (feat: cv edwar)
         }
 
         @media (max-width: 640px) {
             .grid {
                 grid-template-columns: 1fr;
             }
-
-            .panel {
-                padding: 1.4rem;
-            }
         }
     </style>
 </head>
 <body>
-    <main class="panel">
-        <h1>Portafolio Profesional</h1>
-        <p>Selecciona una seccion. Luego podras conectar cada boton a la app correspondiente.</p>
-
-        <section class="grid">
-            {% for seccion in secciones %}
-                <a class="btn" href="{% url 'seccion_placeholder' seccion.numero %}">{{ seccion.titulo }}</a>
-            {% endfor %}
-        </section>
+    <main class="card">
+        <h1>Pagina principal</h1>
+        <div class="grid">
+            <a class="btn" href="{% url 'seccion_placeholder' 1 %}">Boton 1</a>
+            <a class="btn" href="{% url 'seccion_placeholder' 2 %}">Boton 2</a>
+            <a class="btn" href="{% url 'cv_edwar:index' %}">Boton 3 (CV Edwar)</a>
+            <a class="btn" href="{% url 'seccion_placeholder' 4 %}">Boton 4</a>
+        </div>
     </main>
 </body>
 </html>
