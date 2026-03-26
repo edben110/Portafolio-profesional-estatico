@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seccion {{ numero }}</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 2rem;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(145deg, #f8fafc, #e2e8f0);
+            color: #0f172a;
+        }
+
+        .card {
+            width: min(560px, 100%);
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 14px 40px rgba(15, 23, 42, 0.15);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: #334155;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            background: #0ea5e9;
+            color: #fff;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <h1>Seccion {{ numero }}</h1>
+        <p>Esta pagina es temporal. Aqui podras mostrar la app que conectes mas adelante.</p>
+        <a href="{% url 'home' %}">Volver al inicio</a>
+    </main>
+</body>
+</html>
