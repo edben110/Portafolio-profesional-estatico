@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Portafolio Profesional</title>
     <style>
         body {
             margin: 0;
@@ -34,7 +34,6 @@
             display: grid;
             grid-template-columns: repeat(2, minmax(180px, 1fr));
             gap: 12px;
->>>>>>> 34e25c7 (feat: cv edwar)
         }
 
         .btn {
@@ -46,12 +45,14 @@
             background: #f8fafc;
             border-radius: 10px;
             padding: 12px 14px;
+            transition: all 0.3s ease;
         }
 
         .btn:hover {
             background: #38bdf8;
             color: #ffffff;
->>>>>>> 34e25c7 (feat: cv edwar)
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
         }
 
         @media (max-width: 640px) {
@@ -63,12 +64,11 @@
 </head>
 <body>
     <main class="card">
-        <h1>Pagina principal</h1>
+        <h1>Portafolio Profesional</h1>
         <div class="grid">
-            <a class="btn" href="{% url 'seccion_placeholder' 1 %}">Boton 1</a>
-            <a class="btn" href="{% url 'seccion_placeholder' 2 %}">Boton 2</a>
-            <a class="btn" href="{% url 'cv_edwar:index' %}">Boton 3 (CV Edwar)</a>
-            <a class="btn" href="{% url 'seccion_placeholder' 4 %}">Boton 4</a>
+            {% for seccion in secciones %}
+                <a class="btn" href="{% url 'seccion_placeholder' seccion.numero %}">{{ seccion.titulo }}</a>
+            {% endfor %}
         </div>
     </main>
 </body>

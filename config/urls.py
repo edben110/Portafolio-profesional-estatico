@@ -20,9 +20,10 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('seccion/4/', include('hv.urls')),
     path('seccion/<int:numero>/', views.seccion_placeholder, name='seccion_placeholder'),
     path('admin/', admin.site.urls),
-    path('cv-edwar/', include('cv_edwar.urls')),
     path('cv-sebastian/', include('cv_sebastian.urls')),
+    path('cv-edwar/', include('cv_edwar.urls')),
+    path('cv-daniel/', include('cv_daniel.urls')),
+    path('hv-juanma/', include('hv.urls')),
 ]

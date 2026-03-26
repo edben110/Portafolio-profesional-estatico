@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'hv',
     'cv_sebastian',
     'cv_edwar',
+    'cv_daniel',
 ]
 
 MIDDLEWARE = [
